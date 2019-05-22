@@ -1,17 +1,4 @@
 
-		// var number='firstno',c='=';
-		
-		// var num='secondno';
-		// var firstno=10;
-		// var secondno=20;s
-		// document.write(c);
-		// document.write(firstno);
-		// document.write("<br>");
-		// document.write(num);
-		// document.write(c);
-		// document.write(secondno);
-		// document.write("<br>");
-
 		var one=10;
 		var two=20;
 		var add=one+two;
