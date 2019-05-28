@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+	<link rel="stylesheet" type="text/css" href="./css/first.css">
+	
+</head>
+<body>
+	<div>Get the total</div>
+	<script type="text/javascript">
+
+	function checked1(){
+	var num=document.getElementsByName('number');
+	var sum=0;
+	for(var i=0;i<num.length;i++){
+		if(num[i].type=='checkbox' && num[i].checked==true)
+			sum+=parseInt(num[i].value);	
+		}
+	document.write(sum);
+}
+ function selectAll() {
+        var items = document.getElementsByName('number');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type == 'checkbox')
+                items[i].checked = true;
+        }
+    }
+    function unselectAll() {
+        var items = document.getElementsByName('number');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type == 'checkbox')
+                items[i].checked = false;
+        }
+    }
+
+</script>
+		
+	 	<input type="checkbox" name="number" value=10> 10$</input>
+	 	<input type="checkbox" name="number" value=20> 20$</input>
+		<input type="checkbox" name="number" value=5> 5$</input>
+		<input type="checkbox" name="number" value=7> 7$</input>
+	 	<input type="checkbox" name="number" value=12> 12$</input>
+	 	<input type="checkbox" name="number" value=30> 30$</input>
+	<div id="button">
+		<input type="button" name="name" value="Unselectall" onclick="unselectAll()">
+		<input type="button" name="name" value="selectAll" onclick="selectAll()">
+	</div>
+	<div id="button1">
+		<input type="button" name="name" value="submit" onclick="checked1()">
+	</div>
+
+</body>
+</html>
