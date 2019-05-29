@@ -6,9 +6,8 @@
 	
 </head>
 <body>
-	<div>Get the total</div>
+	<div>Get the total</div><br><br>
 	<script type="text/javascript">
-
 	function checked1(){
 	var num=document.getElementsByName('number');
 	var sum=0;
@@ -16,7 +15,9 @@
 		if(num[i].type=='checkbox' && num[i].checked==true)
 			sum+=parseInt(num[i].value);	
 		}
-	document.write(sum);
+		
+	document.getElementById('color').innerHTML="sum= "+sum;  
+	
 }
  function selectAll() {
         var items = document.getElementsByName('number');
@@ -34,20 +35,16 @@
     }
 
 </script>
-		
-	 	<input type="checkbox" name="number" value=10> 10$</input>
-	 	<input type="checkbox" name="number" value=20> 20$</input>
-		<input type="checkbox" name="number" value=5> 5$</input>
-		<input type="checkbox" name="number" value=7> 7$</input>
-	 	<input type="checkbox" name="number" value=12> 12$</input>
-	 	<input type="checkbox" name="number" value=30> 30$</input>
-	<div id="button">
-		<input type="button" name="name" value="Unselectall" onclick="unselectAll()">
-		<input type="button" name="name" value="selectAll" onclick="selectAll()">
-	</div>
-	<div id="button1">
-		<input type="button" name="name" value="submit" onclick="checked1()">
-	</div>
-
+	 	<input type="checkbox" name="number" value=10>10$
+	 	<input type="checkbox" name="number" value=20  class="space"> 20$
+		<input type="checkbox" name="number" value=5   class="space"> 5$<br><br>
+		<input type="checkbox" name="number" value=7>17$
+	 	<input type="checkbox" name="number" value=12  class="space"> 12$
+	 	<input type="checkbox" name="number" value=30  class="space"> 30$<br>
+		<input type="button" name="name" value="Unselectall" onclick="unselectAll()"  class="button">
+		<input type="button" name="name" value="selectAll" onclick="selectAll()" class="button1"><br>
+		<input type="button" name="name" value="submit" onclick="checked1()" id="button2">
+		<div id="color">
+		 </div>
 </body>
 </html>
